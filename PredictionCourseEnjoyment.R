@@ -143,7 +143,7 @@ Tree = function(data){
   yhat.bag <- predict(rf.Class , newdata = data[-train , ])
   mean((yhat.bag - mydata.test)^2)
   OTE <- mean((yhat.bag - mydata.test)^2)
-# Print Tree (comentted out)
+# Print Tree (commented out)
   #importance(rf.Class)
   #varImpPlot(rf.Class)
   #plot(tree.mydata)
@@ -151,7 +151,7 @@ Tree = function(data){
   return(OTE)
 }
 
-# Linear Regretoin 
+# Linear Regression 
 Linear = function(data){
   set.seed (24)
   # ----- Linear -----
@@ -159,8 +159,8 @@ Linear = function(data){
   lm.fit1 <- lm(data[train, ]$liked ~ ., data[train , ])
   yhat <- predict(lm.fit1 , newdata = data[-train , ])
   LDE <- mean((yhat - data[-train , ]$liked)^2)
-# Print Regretoin  (comentted out)
-  #plot(data$useful,data$liked, main = "Usful Vs Liked with our Model")
+# Print Regression  (commented out)
+  #plot(data$useful,data$liked, main = "Useful Vs Liked with our Model")
   #abline(lm.fit1)
   return(LDE)
 }
@@ -188,7 +188,7 @@ NN = function(data){
   p1 <- output$net.result
   pred1 <- ifelse(p1 > 0.5, 1, 0)
   NNE <- mean((p1-test_data$liked)^2)
-# Print Network  (comentted out)
+# Print Network  (commented out)
   #plot(n, rep = 1)
   return(NNE)
 }
