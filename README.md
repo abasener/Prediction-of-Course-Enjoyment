@@ -1,2 +1,3 @@
 # Prediction-of-Course-Enjoyment
-This R code runs a set of machine learning algorithms on reviews from courses from the University of Waterloo. Then outputs the error rates to a text document.
+The code uses Random Forest, Linear Regression, and Neural Networks to predict the enjoyment level of each course at the University of Waterloo. The data is from Kaggle. It creates a function for each method and then runs different subsets of the Waterloo data through the methods. The error rates are output to a text document. Then the error rates are recorded and plotted for each method and the data subset.
+To run the code, download the data set from Kaggle and put the correct path in the setup. The code to make diagrams of what each method is commented out, uncomment them to see the outputs.  When running the code, the functions at the bottom of the document must be run before they are called. 
